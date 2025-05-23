@@ -1,0 +1,53 @@
+.reaction-message {
+  font-size: 1.5rem;
+  margin: 1rem 0;
+  min-height: 3rem;
+  text-align: center;
+  transition: all 0.3s ease-in-out;
+}
+
+.message-text {
+  color: var(--primary);
+  text-shadow: var(--accent-glow);
+  animation: fadeIn 0.4s ease;
+}
+
+.reaction-time {
+  margin-top: 0.5rem;
+  font-weight: bold;
+  color: var(--secondary);
+  text-shadow: 0 0 6px var(--secondary);
+  animation: pulse 0.6s ease-in-out;
+}
+
+.reaction-time span {
+  font-weight: 700;
+  color: #ffffff;
+  text-shadow: 0 0 8px #ffffff;
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+    opacity: 0.7;
+  }
+  50% {
+    transform: scale(1.08);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 0.9;
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

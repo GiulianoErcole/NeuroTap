@@ -1,0 +1,29 @@
+.chart-container {
+  display: flex;
+  gap: 6px;
+  margin-top: 1rem;
+  width: 90vw;
+  max-width: 600px;
+  height: 100px;
+  align-items: flex-end;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  border-left: 1px solid rgba(255, 255, 255, 0.1);
+  padding: 0 5px 5px 0;
+  backdrop-filter: blur(2px);
+  background: rgba(255, 255, 255, 0.02);
+  border-radius: 8px;
+  box-shadow: inset 0 0 10px rgba(0, 247, 255, 0.1);
+}
+
+.chart-bar {
+  width: 8%;
+  background: linear-gradient(to top, #00f7ff, #ff4f87);
+  border-radius: 3px;
+  box-shadow: 0 0 6px #00f7ff;
+  transition: height 0.3s ease, transform 0.3s ease;
+}
+
+.chart-bar:hover {
+  transform: scaleY(1.1);
+  box-shadow: 0 0 10px #ff4f87, 0 0 20px #00f7ff;
+}

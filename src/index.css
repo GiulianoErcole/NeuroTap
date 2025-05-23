@@ -1,0 +1,112 @@
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap');
+
+:root {
+  --bg-dark: #0a0a0f;
+  --primary: #00f7ff;
+  --secondary: #ff005c;
+  --highlight: #00ffb3;
+  --text-light: #eaeaea;
+  --accent-glow: 0 0 8px var(--primary), 0 0 16px var(--primary);
+  --border-glow: 1px solid rgba(0, 247, 255, 0.3);
+  --retro-pink: #ff4f87;
+  --retro-blue: #00cfff;
+}
+
+body {
+  margin: 0;
+  font-family: 'Orbitron', sans-serif;
+  background: radial-gradient(circle at 30% 30%, #12121a, #0a0a0f);
+  color: var(--text-light);
+  height: 100vh;
+  overflow: hidden;
+  user-select: none;
+}
+
+.app {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  padding: 2rem;
+  transition: background 0.3s ease-in-out;
+  outline: none;
+}
+
+.go-phase {
+  animation: goFlash 0.6s ease-in-out infinite alternate;
+}
+
+@keyframes goFlash {
+  from {
+    background-color: #0a0a0f;
+  }
+  to {
+    background-color: var(--highlight);
+  }
+}
+
+.title {
+  font-size: 2.75rem;
+  margin-bottom: 0.5rem;
+  color: var(--primary);
+  text-shadow: var(--accent-glow);
+  letter-spacing: 3px;
+  text-transform: uppercase;
+}
+
+.status {
+  font-size: 1.2rem;
+  margin: 0.5rem 0;
+  color: var(--secondary);
+  text-shadow: 0 0 6px var(--secondary);
+}
+
+.button {
+  background: none;
+  color: var(--text-light);
+  border: var(--border-glow);
+  padding: 12px 24px;
+  margin: 10px;
+  font-size: 1rem;
+  text-transform: uppercase;
+  cursor: pointer;
+  border-radius: 6px;
+  transition: all 0.3s ease-in-out;
+}
+
+.button:hover {
+  background: var(--primary);
+  color: #000;
+  box-shadow: var(--accent-glow);
+  transform: scale(1.05);
+}
+
+.chart {
+  width: 100%;
+  max-width: 600px;
+  background: rgba(255, 255, 255, 0.05);
+  border: var(--border-glow);
+  border-radius: 12px;
+  padding: 1rem;
+  margin-top: 2rem;
+  box-shadow: 0 0 12px rgba(0, 247, 255, 0.1);
+  backdrop-filter: blur(4px);
+}
+
+header, footer {
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+small.status {
+  font-size: 0.85rem;
+  color: #aaa;
+  text-shadow: none;
+}

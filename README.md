@@ -30,7 +30,7 @@ Run NeuroTap locally for development or testing:
 ### 📦 Installation
 
 ```bash
-git clone https://github.com/yourusername/neurotap.git
+/neurotap.git
 cd neurotap
 npm install     # or yarn install
 npm start       # or yarn start
